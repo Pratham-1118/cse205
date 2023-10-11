@@ -3,7 +3,14 @@ class Solution {
         if (n <= 0) {
             return false;
         }
+        if (n == 1) {
+            return true;
+        }
+        if (n % 2 == 1) {
+            return false;
+        }
+        return isPowerOfTwo(n / 2);
         // Using bitwise operation to check if there's only one '1' bit
-        return (n & (n - 1)) == 0;
+        // return (n & (n - 1)) == 0;
     }
 }
